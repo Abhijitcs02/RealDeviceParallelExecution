@@ -1,0 +1,37 @@
+<suite name="ProductTesting" parallel="tests">
+    <listeners>
+        <!--<listener class-name="org.testng.reporters.EmailableReporter2" />  -->
+    </listeners>
+    <test name="RealDevice1">
+        <parameter name="device" value="8908ujqh"></parameter>
+        <parameter name="apppackage" value="8908ujqh"></parameter>
+        <parameter name="activity" value="8908ujqh"></parameter>
+        <parameter name="version" value="8908ujqh"></parameter>
+        <parameter name="appiumServer" value="http://host/wd/hub"></parameter>
+        <classes>
+            <class name="RealDeviceFirst" >
+                <!--<methods>
+                    <include name="test1" />
+                    <include name="test2" />
+                    <exclude name="test3" />
+                </methods> -->
+            </class>
+        </classes>
+    </test>
+    <test name="RealDevice2">
+        <parameter name="device" value="8908ujqh"></parameter>
+        <parameter name="apppackage" value="8908ujqh"></parameter>
+        <parameter name="activity" value="8908ujqh"></parameter>
+        <parameter name="version" value="8908ujqh"></parameter>
+        <parameter name="appiumServer" value="http://host/wd/hub"></parameter>
+        <classes>
+            <class name="RealDeviceSecond" >
+                <!--<methods>
+                    <include name="test1" />
+                    <include name="test2" />
+                    <exclude name="test3" />
+                </methods> -->
+            </class>
+        </classes>
+    </test>
+</suite>
