@@ -1,37 +1,37 @@
-<suite name="ProductTesting" parallel="tests">
-    <listeners>
-        <!--<listener class-name="org.testng.reporters.EmailableReporter2" />  -->
-    </listeners>
+<suite name="ProductTesting" parallel="methods" thread-count="4">
+
     <test name="RealDevice1">
-        <parameter name="device" value="8908ujqh"></parameter>
-        <parameter name="apppackage" value="8908ujqh"></parameter>
+        <!--<parameter name="device" value="4PSCHM6PWGONIJAQ"></parameter>-->
+        <!--<parameter name="apppackage" value="8908ujqh"></parameter>
         <parameter name="activity" value="8908ujqh"></parameter>
         <parameter name="version" value="8908ujqh"></parameter>
-        <parameter name="appiumServer" value="http://host/wd/hub"></parameter>
+        <parameter name="appiumServer" value="http://host/wd/hub"></parameter> -->
         <classes>
             <class name="RealDeviceFirst" >
-                <!--<methods>
+
+                <methods>
                     <include name="test1" />
-                    <include name="test2" />
-                    <exclude name="test3" />
-                </methods> -->
+                    <include name="test3" />
+                    <!--<include name="test2" />-->
+                    <!--<exclude name="test3" />-->
+                </methods>
             </class>
         </classes>
     </test>
-    <test name="RealDevice2">
-        <parameter name="device" value="8908ujqh"></parameter>
-        <parameter name="apppackage" value="8908ujqh"></parameter>
-        <parameter name="activity" value="8908ujqh"></parameter>
-        <parameter name="version" value="8908ujqh"></parameter>
-        <parameter name="appiumServer" value="http://host/wd/hub"></parameter>
-        <classes>
-            <class name="RealDeviceSecond" >
-                <!--<methods>
-                    <include name="test1" />
-                    <include name="test2" />
-                    <exclude name="test3" />
-                </methods> -->
-            </class>
-        </classes>
-    </test>
+    <!--<test name="RealDevice2">-->
+        <!--&lt;!&ndash;<parameter name="device" value="T00940Z5XZ"></parameter>&ndash;&gt;-->
+        <!--&lt;!&ndash;<parameter name="apppackage" value="8908ujqh"></parameter>-->
+        <!--<parameter name="activity" value="8908ujqh"></parameter>-->
+        <!--<parameter name="version" value="8908ujqh"></parameter>-->
+        <!--<parameter name="appiumServer" value="http://host/wd/hub"></parameter> &ndash;&gt;-->
+        <!--<classes>-->
+            <!--<class name="RealDeviceSecond" >-->
+                <!--<methods>-->
+                    <!--<include name="test2" />-->
+                    <!--&lt;!&ndash;<include name="test2" />&ndash;&gt;-->
+                    <!--&lt;!&ndash;<exclude name="test3" />&ndash;&gt;-->
+                <!--</methods>-->
+            <!--</class>-->
+        <!--</classes>-->
+    <!--</test>-->
 </suite>
