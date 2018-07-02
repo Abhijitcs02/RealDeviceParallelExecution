@@ -18,13 +18,14 @@ import org.openqa.selenium.remote.server.handler.FindElement;
 import io.appium.java_client.MobileBy.ByAccessibilityId;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class RealDeviceFirst {
 
-
+    @Parameters({"device","appiumServer"})
     @Test
-    public void test1() throws MalformedURLException, InterruptedException{
+    public void test1(String device,String appiumServer) throws MalformedURLException, InterruptedException{
 
             // Create object of DesiredCapabilities class
 
@@ -32,8 +33,8 @@ public class RealDeviceFirst {
             // Optional
 
             //capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "");
-            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "4PSCHM6PWGONIJAQ");
-            capabilities.setCapability(MobileCapabilityType.UDID, "4PSCHM6PWGONIJAQ");
+            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, device);
+            capabilities.setCapability(MobileCapabilityType.UDID, device);
             // Specify the device name (any name)
 
             capabilities.setCapability("deviceName", "My New Phone");
@@ -63,7 +64,7 @@ public class RealDeviceFirst {
 
             // Start android driver I used 4727 port by default it will be 4723
 
-            WebDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+            WebDriver driver = new AndroidDriver(new URL(appiumServer), capabilities);
 
 
 
