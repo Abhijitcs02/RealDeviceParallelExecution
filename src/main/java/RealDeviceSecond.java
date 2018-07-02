@@ -16,10 +16,6 @@ public class RealDeviceSecond {
 
     @Test
     public void test2() throws MalformedURLException, InterruptedException{
-
-        {
-
-
             // Create object of DesiredCapabilities class
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -67,32 +63,6 @@ public class RealDeviceSecond {
 
 
 
-            // Enter the text in textbox
-            //my_text_fieldCD  android.widget.EditText
-            //driver.findElement(By.xpath("//android.widget.EditText[@content-desc='my_text_fieldCD']")).sendKeys("Mukesh Selenium Appium");
-            //driver.findelementb.sendKeys("Mukesh Selenium Appium");
-
-//
-//		driver.findElement(By.xpath("//android.widget.EditText[@index='3']")).sendKeys("Mukesh Selenium Appium");
-//		driver.findElement(ByAccessibilityId.AccessibilityId("my_text_fieldCD")).clear();
-//		driver.findElement(ByAccessibilityId.AccessibilityId("my_text_fieldCD")).sendKeys("abhijit");
-//		driver.findElement(ByAccessibilityId.AccessibilityId("my_text_fieldCD")).clear();
-//		driver.findElement(ByClassName.className("android.widget.EditText")).sendKeys("Priya");
-//		driver.findElement(ByAccessibilityId.AccessibilityId("my_text_fieldCD")).clear();
-//		driver.findElement(By.name("I accept adds")).click();
-
-            //driver.findElement(By.id("io.selendroid.testapp:id/input_adds_check_box")).click();
-            // click on registration button
-
-            //driver.findElement(By.id("io.selendroid.testapp:id/startUserRegistration")).click();
-
-            // Wait for 10 second
-
-            // Whats app
-//		driver.findElement(By.xpath("//android.widget.TextView[@text='STATUS']")).click();
-//		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-//		driver.findElement(By.xpath("//android.widget.TextView[@text='CALLS']")).click();
-
             driver.findElement(By.id("com.whatsapp:id/menuitem_search")).click();
 
             driver.findElement(By.id("com.whatsapp:id/search_src_text")).sendKeys("vikash");
@@ -108,8 +78,5 @@ public class RealDeviceSecond {
             // close the application
             driver.quit();
 
-
-
-        }
     }
 }
